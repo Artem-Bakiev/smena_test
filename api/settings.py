@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_rq',
+    'checkgenerator',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +77,25 @@ WSGI_APPLICATION = 'api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'smena',
+        'USER': 'smenauser',
+        'PASSWORD': 'smenaqwe',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
+
+RQ_QUEUES = {
+    'default': {
+        'HOST': 'localhost',
+        'PORT': 6379,
+        'DB': 0,
+        'DEFAULT_TIMEOUT': 360,
+    },
+}
+
+RQ_API_TOKEN = "token"
 
 
 # Password validation
