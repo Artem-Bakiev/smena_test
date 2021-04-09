@@ -3,7 +3,7 @@ from django.contrib.postgres.fields import JSONField
 
 # Create your models here.
 CHECK_TYPES = (
-    ('kitchen',),
+    ('kitchen'),
     ('client'),
 )
 
