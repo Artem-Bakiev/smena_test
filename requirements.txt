@@ -2,6 +2,7 @@ certifi==2020.12.5
 chardet==4.0.0
 click==7.1.2
 Django==2.2.6
+django-cors-headers==3.2.1
 django-rq==2.4.1
 idna==2.10
 psycopg2-binary==2.8.6

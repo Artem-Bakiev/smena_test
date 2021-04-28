@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'django_rq',
     'checkgenerator',
 ]
@@ -81,7 +82,7 @@ DATABASES = {
         'NAME': 'smena',
         'USER': 'smenauser',
         'PASSWORD': 'smenaqwe',
-        'HOST': 'localhost',
+        'HOST': 'postgresql',
         'PORT': '',
     }
 }
